@@ -81,7 +81,12 @@ wife(X) :- family( _, X, _).
 child(X) :- family( _, _, Children), member(X, Children). exists(Persons) :- husband( Persons); wife( Persons); child( Persons). dateofbirth(person(_, _, Date, _), Date).
 salary(person(_, _, _, works(_, S)), S).
 salary(person(_, _, _, unemployed), 0).
-Write the details of steps of search (unification, resolutions, and back tracking) and also the answer for each of the following queries. (You can show the details of your search process by drawing search trees for each of the following queries)
-? exists(P), dateofbirth(P, date(_,_,Y)), Y<1963, salary(P, Salary), Salary<15000. ? exists(P), dateofbirth(P,date(_,_,Y)), !, Y<1998, salary(P,Salary), Salary<20000. ? wife(person(GivenName, FamilyName, _, works(_,_))).
+
+
+
+Write the details of steps of search (unification, resolutions, and back tracking) and also the answer for each of the following queries. 
+? exists(P), dateofbirth(P, date(_,_,Y)), Y<1963, salary(P, Salary), Salary<15000. 
+? exists(P), dateofbirth(P,date(_,_,Y)), !, Y<1998, salary(P,Salary), Salary<20000.
+? wife(person(GivenName, FamilyName, _, works(_,_))).
 ? child(X), dateofbirth(X, date(_,_,1983)).
 
