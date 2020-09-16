@@ -114,6 +114,27 @@ Automated Readability Index: 13.8
 Grade level: 18-24 (college student)
 
 
+## 6. Object Oriented Programming with Ruby
+In this question, there's an auto showroom inventory catalogue, my program should read a car listings file which contains all available inventory details where each line contains the following 11 listing features:
+#km, type, transmission, stock#, Drivetrain, Status, Fuel Economy, car_maker, model, year, Trim,set_of_features
+examples of listing lines as follows:
+65101km,Sedan,Manual,18131A,FWD,Used,5.5L/100km,Toyota,camry,SE,{AC, Heated Seats, Heated Mirrors, Keyless Entry},2010
+coupe,1100km,auto,RWD, Mercedec,CLK,LX ,18FO724A,2017,{AC, Heated Seats, Heated Mirrors, Keyless Entry, Power seats},6L/100km,Used
+AWD,SUV,0km,auto,new,Honda,CRV,LE,19BF723A,8L/100km,2018,{Heated Seats, Heated Mirrors, Keyless Entry}
+Note: order of listing features varies from one line to another as it was entered by employees not trained for proper data entry. Also, assume the following listing:
 
+<img width="453" alt="Screen Shot 2020-09-15 at 10 23 48 PM" src="https://user-images.githubusercontent.com/46803937/93285137-283bed00-f7a2-11ea-8b7c-ad11b17a09ec.png">
 
+Your program should have four methods as follows:
+• convertListings2Catalougue: a method that:
+  o reads the listings file line by line
+  o correctly recognizes and extracts different listing features
+  o instantiates appropriate objects of different classes and subclasses that you should define to hold the listing information for different car makers, their models and trim lines available in our listings. Any parent class should have properties that count the number of listings of that maker or that model along with other common behavior or properties. In the listings examples above, you can create an object of class (car_model) and store all the listing information in that class and also update the parent (car_maker) common class properties accordingly.
+Note: The OOP design and choice of classes and subclasses is something that differs from one programmer to another and depends on the way you look at the problem.
+• searchInventory: a search method that accepts a hash as its argument and based on the combination of hash key-value pairs will perform an advanced search for all vehicles in stock that matches the criteria. For example, searchInventory( {“car_maker” => ”Mercedes”}) should display all Mercedes vehicles available.
+• Add2Inventory: a method that accepts a new listing as a single line of unordered listing features, add the line to the original listing file and add an appropriate object to the catalogue based on the listing features.
+• saveCatalogue2File: a method that traverses all created catalogue objects and stores them to an output file alphabetically according to their maker name. each listing features will follow a strict fixed order as opposed to the original file random order. For example, the original three listings will look as follows in the output file:
+Toyota,camry,SE,65101km,2010, Sedan, FWD, Manual, 18131A, Used,5.5L/100km, {AC, Heated Seats, Heated Mirrors, Keyless Entry}
+Mercedec,CLK,LX, 1100km,2017,coupe, RWD, auto, 18FO724A, Used,6L/100km,{AC, Heated Seats, Heated Mirrors, Keyless Entry, Power seats}
+Honda,CRV,LE,0km, 2018, SUV, AWD, auto, 19BF723A, new,8L/100km,{Heated Seats, Heated Mirrors, Keyless Entry}
 
