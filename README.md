@@ -90,3 +90,30 @@ Write the details of steps of search (unification, resolutions, and back trackin
 ? wife(person(GivenName, FamilyName, _, works(_,_))).
 ? child(X), dateofbirth(X, date(_,_,1983)).
 
+
+
+## 5 Object oriented programming with Ruby 
+Automated Readability Index (ARI) is used for testing readability in English text. The mathematical formula for calculating ARI in a text document is as follows:
+𝐴𝑅𝐼 = 4.71 × (𝑐h𝑎𝑟𝑎𝑐𝑡𝑒𝑟𝑠/𝑤𝑜𝑟𝑑) + 0.5 × (𝑤𝑜𝑟𝑑𝑠/𝑠𝑒𝑛𝑡𝑒𝑛𝑐𝑒) − 21.43
+Where:
+𝑐h𝑎𝑟𝑎𝑐𝑡𝑒𝑟𝑠= ∑𝑙𝑒𝑡𝑡𝑒𝑟𝑠,𝑛𝑢𝑚𝑏𝑒𝑟𝑠𝑎𝑛𝑑𝑝𝑢𝑛𝑐𝑡𝑢𝑎𝑡𝑖𝑜𝑛 𝑤𝑜𝑟𝑑𝑠 = ∑ 𝑠𝑝𝑎𝑐𝑒𝑠
+𝑠𝑒𝑛𝑡𝑒𝑛𝑐𝑒𝑠 = ∑ 𝑓𝑢𝑙𝑙 𝑠𝑡𝑜𝑝𝑠
+The following table shows the educational grade level that corresponds to each ARI score:
+
+<img width="210" alt="Screen Shot 2020-09-15 at 9 30 38 PM" src="https://user-images.githubusercontent.com/46803937/93281744-bad88e00-f79a-11ea-9326-ed114b90ab68.png">
+
+This is a Ruby method that can read any document file, count number of characters, words, and sentences and then i applied the ARI formula to find out the grade level required for a person to read the opened document. For example, for the following “paragraph.txt” file:
+
+After the Lord Stanley of Preston was appointed by Queen Victoria as Governor General of Canada on June 11, 1888, he and his family became highly enthusiastic about ice hockey. Stanley was first exposed to the game at Montreal's 1889 Winter Carnival, where he saw the Montreal Victorias play the Montreal Hockey Club. The Montreal Gazette reported that he "expressed his great delight with the game of hockey and the expertise of the players". During that time, organized ice hockey in Canada was still in its infancy and only Montreal and Ottawa had anything resembling leagues.
+
+A Ruby method call: calcARI(“paragraph.txt”) outputs the following: 
+
+Total # of characters: 474
+Total # of words: 96 Total # of sentences: 4
+Automated Readability Index: 13.8
+Grade level: 18-24 (college student)
+
+
+
+
+
